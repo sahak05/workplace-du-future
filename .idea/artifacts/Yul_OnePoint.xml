@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Yul-OnePoint">
+    <output-path>$PROJECT_DIR$/out/artifacts/Yul_OnePoint</output-path>
+    <root id="root">
+      <element id="archive" name="Yul_OnePoint.jar">
+        <element id="module-output" name="Yul-OnePoint" />
+      </element>
+    </root>
+  </artifact>
+</component>

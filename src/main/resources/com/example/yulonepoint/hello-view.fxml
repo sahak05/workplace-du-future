@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
 <!--<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.yulonepoint.HelloController">
     <padding>
@@ -16,9 +17,27 @@
     <Button text="Add new Activity" onAction="#onHelloButtonClick"/>
 </VBox>-->
 
-<HBox alignment="TOP_LEFT" spacing="20.0" xmlns:fx="http://javafx.com/fxml" >
-    <Button text="Activites a faire" layoutX="500" layoutY="100"/>
-    <Button text="Ajouter une activite"/>
-    <Button text="Profil"/> <!--normalement un boutton cliquable-->
-
-</HBox>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.yulonepoint.HelloController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="0.0" prefWidth="105.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="520.0" minWidth="0.0" prefWidth="295.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="131.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="131.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="329.0" minHeight="10.0" prefHeight="204.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="72.0" prefWidth="94.0" text="Profil" />
+      <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="107.0" text="Feedback" GridPane.rowIndex="3" />
+      <Label fx:id="Profile" alignment="CENTER" prefHeight="69.0" prefWidth="60.0" wrapText="true" GridPane.rowIndex="1" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="140.0" text="Activites a faire" onAction="#creerUneActivite" />
+            <Button mnemonicParsing="false" prefHeight="73.0" prefWidth="236.0" text="Creer une activite" />
+         </children>
+      </HBox>
+   </children>
+</GridPane>

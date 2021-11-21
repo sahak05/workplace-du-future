@@ -73,4 +73,8 @@ public class Employee {
     public ArrayList<Activity> showS(){
         return this.getListActivity();
     }
+    public String profile(){
+        String fullName = this.getFirstName() +" "+this.getLastName();
+        return fullName+ "\n"+ this.getEmail();
+    }
 }

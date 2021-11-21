@@ -5,10 +5,19 @@ import javafx.scene.control.Label;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private Label Profile;
+    Employee employee = new Employee("Marc-Arthur", "XOXO", "marc-arthur.xoxo@onecompany.org");
+
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        Profile.setText(employee.profile());
     }
+
+    @FXML
+    protected void creerUneActivite() {
+
+    }
+
+   
 }
